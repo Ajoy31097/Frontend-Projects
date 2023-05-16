@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<style>
+		body {
+			background-image: url("wallpaperflare.com_wallpaper (4).jpg");
+			background-size: 100vw 100vh;
+			background-repeat: no-repeat;
+		}
+		.container {
+			height: auto;
+			margin: auto;
+			max-width: 500px;
+			padding: 20px;
+			border: 1px solid blueviolet;
+			border-radius: 50px;
+			box-shadow: 5px 5px 5px 5px blueviolet;
+			background-color: transparent;
+			position: auto;
+			font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2>Contact Us</h2>
+		<form>
+			<div class="form-group">
+				<label for="name"><b>Name</b></label>
+				<input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+			</div>
+
+			<div class="form-group">
+				<label for="email"><b>Email</b></label>
+				<input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+			</div>
+
+			<div class="form-group">
+				<label for="phone"><b>Phone Number</b></label>
+				<input type="tel" class="form-control" id="phone" name="phone" placeholder="+91..">
+			</div>
+
+			<div class="form-group">
+				<label for="time"><b>Desired Time for Call</b></label>
+				<input type="datetime-local" class="form-control" id="time" name="time">
+			</div>
+
+			<button type="button" class="btn btn-primary" onclick="getCall()">Get a Call</button>
+		</form>
+		<script>
+		function getCall() {
+			var name = document.getElementById("name").value;
+			var email = document.getElementById("email").value;
+			var phone = document.getElementById("phone").value;
+			var time = document.getElementById("time").value;
+			alert("Thank you for your interest, " + name + "! We will contact you at " + phone + " on " + time + ".");
+		}
+	</script>
+	</div>
+
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
